@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="sasi" content="trail"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title> trail </title>
+
+<style>
+
+body
+{
+  position:fixed;
+}
+
+ *{
+ padding:0px;
+ margin:0px;
+ background-color:black;
+}
+
+.d1
+{
+  width:500px;
+  height:500px;
+  border:none;
+  margin:100px;
+
+ display:flex;
+ flex-direction:row;
+ flex-wrap:wrap;
+ flex-grow:1;
+ justify-content:center;
+ align-items:flex-end;
+
+}
+
+input[type="text"]
+{
+  width:152px;
+  height:165px;
+  color:aqua;
+  font-size:80px;
+  font-width:100px;
+  border:none;
+  outline:none;
+  text-align:center;
+}
+
+#d2
+{
+ width:60px;
+ height:60px;
+ border:3px solid pink;
+ border-radius:7px;
+ position:relative;
+ top:-250px;
+ left:1000px;
+ opacity:1;
+}
+
+#d3
+{
+ width:25px;
+ height:25px;
+ border-radius:50%;
+ border:3px solid pink;
+ position:relative;
+ top:10px;
+ left:8px;
+}
+ 
+h1
+{
+ font-size:30px;
+ color:pink;
+ position:relative;
+ top:-240px;
+ left:1000px;
+}
+
+h2
+{
+ font-size:30px;
+ color:white;
+ position:relative;
+ top:-320px;
+ left:1060px;
+}
+
+mark
+{
+ color:pink;
+}
+
+article
+{
+ color:red;
+ font-size:20px;
+ position:relative;
+ top:-800px;
+ left:900px;
+}
+
+#i1,#i4,#i7,#i2,#i5,#i8
+{
+  border-right:2px solid pink;
+}
+
+#i1,#i2,#i3
+{
+  border-bottom:2px solid pink;
+}
+#i4,#i5,#i6
+{
+  border-bottom:2px solid pink;
+}
+
+</style>
+</head>
+<body>
+
+<div class="d1">
+
+<input type="text" id="i1"/>
+<input type="text" id="i2" />
+<input type="text" id="i3"  />
+<br>
+<input type="text" id="i4" />
+<input type="text" id="i5" />
+<input type="text" id="i6" />
+<br>
+<input type="text" id="i7" />
+<input type="text" id="i8" />
+<input type="text" id="i9" />
+
+</div>
+
+<br>
+
+<div id="d2">
+
+ <div id="d3">
+ </div>
+
+</div>
+
+<h1>followers</h1>
+<h2 id="h">0</h2>
+
+<article>
+ you & your friend can play this <mark>AWESOME</mark> <b>game<b><br>
+ choose any <mark> 2 characters </mark> of ur choice.<br>
+ if the same character repeats<strong> 3 times </strong>
+ in <q> any direction </q><br>
+ <mark><b>your followers will be increase</b></mark><br>
+ if not then ur followers will <mark>decrease</mark>
+ <br>
+ <br>
+  press any key to <mark>start</mark><br>
+  double click to <mark>reset</mark>
+</article>
+
+<script>
+
+localStorage.setItem('sasi','kumar');
+var count=0;
+document.addEventListener("dblclick",start);
+function start()
+{
+
+var q=window.localStorage.setItem('sasi','kumar');
+console.log(q);
+var s=document.getElementById("i1").value;
+var t=document.getElementById("i2").value;
+var u=document.getElementById("i3").value;
+
+var v=document.getElementById("i4").value;
+var w=document.getElementById("i5").value;
+var x=document.getElementById("i6").value;
+
+var y=document.getElementById("i7").value;
+var z=document.getElementById("i8").value;
+var a=document.getElementById("i9").value;
+
+var b=document.getElementById("h");
+
+if(s==" " && t==" " && u==" ")
+{
+  alert("please fill the block");
+}
+else if(v==" " && w==" " && x==" ")
+{
+  alert("please fill the block");
+}
+else if(s==" " && t==" " && u==" ")
+{
+  alert("please fill the block");
+}
+else if(s==t && t==u)
+{
+count++;
+b.innerHTML=count;
+}
+else if(v==w && w==x)
+{
+count++;
+b.innerHTML=count;
+
+}
+else if(y==z && z==a)
+{
+count++;
+b.innerHTML=count;
+
+}
+else if(s==w && w==a)
+{
+count++;
+b.innerHTML=count;
+
+}
+else if(u==w && w==y)
+{
+count++;
+b.innerHTML=count;
+
+}
+else if(s==v && v==y)
+{
+  count++;
+b.innerHTML=count;
+
+}
+else if(t==w && w==z)
+{
+count++;
+b.innerHTML=count;
+
+}
+else if(u==x && x==a)
+{
+ count++;
+b.innerHTML=count;
+
+}
+else
+{
+  count--;
+  b.innerHTML=count;
+}
+
+var s=document.getElementById("i1");
+
+var t=document.getElementById("i2");
+var u=document.getElementById("i3");
+
+var v=document.getElementById("i4");
+var w=document.getElementById("i5");
+var x=document.getElementById("i6");
+
+var y=document.getElementById("i7");
+var z=document.getElementById("i8");
+var a=document.getElementById("i9");
+
+  s.value=" ";
+  t.value=" ";
+  u.value=" ";
+  v.value=" ";
+  w.value=" ";
+  x.value=" ";
+  y.value=" ";
+  z.value=" ";
+  a.value=" ";
+}
+
+
+
+
+</script>
+</body>
+</html>
